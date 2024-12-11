@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
-import TabsComponent from './components/TabsComponent'
+// import TabsComponent from './components/TabsComponent'
 
 function App() {
   return (
