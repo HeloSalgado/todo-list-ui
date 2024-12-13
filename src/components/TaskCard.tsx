@@ -2,7 +2,7 @@ import React from "react";
 import Tarefa from "../interfaces/Tarefa";
 import "../css/TaskCard.css"
 import { Trash } from "lucide-react";
-import checkData from "../utils/CheckData";
+import checkData from "../utils/checkData";
 
 interface TaskCardProps {
     tarefa: Tarefa;
