@@ -1,0 +1,42 @@
+.container {
+    width: 60%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #D9D9D9;
+}
+
+.text {
+    list-style: none;
+    cursor: pointer;
+    width: 50%;
+    height: 80%;
+    padding: 2px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabSelected {
+    background-color: #8B79E7;
+    color: white;
+}
+
+.tabNormal {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+}

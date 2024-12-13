@@ -1,0 +1,92 @@
+.card {
+    background-color: #e9e8e89f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 300ms ease-in-out;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 7px #201f2163;
+}
+
+p {
+    color: black;
+    margin: 0;
+}
+
+.status {
+    width: 25px;
+    height: 25px;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.status:hover {
+    width: 100px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.status-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute;
+    font-size: 14px;
+}
+
+.status:hover .status-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.status.green {
+    background-color: #055D02;
+    color: white;
+}
+
+.status.red {
+    background-color: #D00B0B;
+    color: white;
+}
+
+.status.blue {
+    background-color: rgb(27, 27, 128);
+    color: white;
+}
+
+.status.yellow {
+    background-color: #DDD344;
+}
+
+.textCard {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 12px;
+    }
+
+    .status {
+        width: 20px;
+        height: 20px;
+    }
+
+    .trash {
+        width: 20px;
+    }
+}

@@ -1,0 +1,53 @@
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputTask {
+    width: 100%;
+    height: 5vh;
+    border-radius: 30px;
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.inputTask:focus {
+    border: none;
+    outline: none;
+}
+
+.btnAdd {
+    background-color: #34025D;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .inputTask {
+        font-size: 0.9rem;
+        height: 3vh;
+    }
+
+    .btnAdd {
+        width: 6vh;
+        height: 6vh;
+        font-size: 1.5rem;
+    }
+}
