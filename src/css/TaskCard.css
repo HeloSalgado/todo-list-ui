@@ -72,8 +72,34 @@ p {
 
 .textCard {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 250px;
+    width: 100%;
+}
+
+.text-basic{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-description{
+    color: #636161;
+}
+
+.action-group {
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+
+
+.task-dropdown {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
 }
 
 @media (max-width: 768px) {

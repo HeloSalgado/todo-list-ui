@@ -3,6 +3,7 @@ import './css/App.css'
 import TabsComponent from './components/TabsComponent'
 import AddTask from './components/AddTask';
 import TaskCard from './components/TaskCard';
+import Modal from './components/Modal';
 
 const dadosMockados = [
   {
@@ -26,7 +27,7 @@ const dadosMockados = [
     title: "Codar",
     description: "Projeto em C#",
     isCompleted: false,
-    dueDate: "2024-12-22",
+    dueDate: "2025-01-22",
     createdAt: "2024-12-01"
   },
   {
@@ -50,6 +51,27 @@ const dadosMockados = [
 
 function App() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeModal, setActiveModal] = useState<number | null>(null);
+
+
+  const dataModal = [
+    {
+      title: "Adicionar",
+      fields: [
+        { label: "Descrição", type: "text", name: "description" },
+        { label: "Data de conclusão", type: "date", name: "completionDate" },
+      ],
+    },
+    {
+      title: "Editar",
+      fields: [
+        { label: "Título", type: "text", name: "title" },
+        { label: "Descrição", type: "text", name: "description" },
+        { label: "Data de conclusão", type: "date", name: "completionDate" },
+      ],
+    },
+  ];
+
 
   return (
     <>
@@ -58,13 +80,16 @@ function App() {
           <h2 className='title'>ToDo List</h2>
           <TabsComponent activeTabIndex={activeTabIndex} onTabClick={setActiveTabIndex} />
         </div>
-        <AddTask />
+        <AddTask setModal={setActiveModal} />
         <div className='taskList'>
           {dadosMockados.map((tarefa, index) => (
-            <TaskCard key={index} tarefa={tarefa} />
+            <TaskCard key={index} tarefa={tarefa} setModal={setActiveModal}/>
           ))}
         </div>
       </div>
+      {activeModal !== null && (
+        <Modal modalData={dataModal[activeModal]} onClose={() => setActiveModal(null)}/>
+      )}
     </>
   )
 }
